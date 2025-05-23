@@ -1,0 +1,24 @@
+<tbody>
+
+	<?php while($row = $result->fetch_assoc()): ?>
+		<tr>
+	<td> <?php echo $row ['id']; ?> </td>
+	<td> <?php echo $row ['student_name']; ?> </td>
+    <td> <?php echo $row ['address']; ?> </td>
+    <td> <?php echo $row ['contact']; ?> </td>
+    <td> <?php echo $row ['Faculty']; ?> </td>
+    <td> <?php echo $row ['book_name']; ?> </td>
+    <td> <?php echo $row ['edition']; ?> </td>
+    <td> <?php echo $row ['time']; ?> </td>
+    <td> <?php echo $row ['date']; ?> </td>
+    <td> <?php echo $row ['status']; ?> </td>
+  <td> <a href="edit_borrows.php?edit=<?php echo $row ['id'] ?>" style="width: 100px;" class="btn btn-sm btn-success rounded-pill" href="edit_books.php"> <i class="fa-solid fa-pen-to-square"></i> Returned  </a>
+     <td> <a href="process/process_borrows.php?delete=<?php echo $row ['id'] ?>" style="width: 100px;" class="Delete btn btn-sm btn-danger rounded-pill" href="edit_borrows.php"> <i class="fa-solid fa-trash"></i>Delete</a></td>
+</tr>
+
+
+	<?php endwhile; ?>
+</tbody>
+
+
+for this i want in the date passed todate with means book not returned i want text of the <tr > to be red
